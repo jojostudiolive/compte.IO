@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090711">
+<title>MIVO – Protéger, accompagner, agir</title>
+<meta name="description" content="MIVO : plateforme de signalement, de prévention et de soutien en ligne.">
+<style>
+:root {
+  --bg:#090711;
+  --panel:#141020;
+  --purple:#9255ff;
+  --light:#c6a7ff;
+  --white:#fff;
+  --muted:#aaa2ba;
+  --border:#302440;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.6;
+}
+header{
+  position:sticky;top:0;z-index:10;
+  background:#0c0914ed;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:15px 6%;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:15px;
+}
+.logo{font-size:27px;font-weight:900;letter-spacing:3px;color:white}
+.logo span{color:var(--purple)}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:13px}
+nav a:hover{color:var(--light)}
+.hero{
+  padding:95px 7% 75px;text-align:center;
+  background:radial-gradient(ellipse at top,#38205c 0%,#090711 65%);
+}
+.tag{
+  display:inline-block;border:1px solid #8250bd;
+  color:var(--light);padding:7px 15px;
+  border-radius:30px;font-size:12px;margin-bottom:22px;
+}
+h1{font-size:clamp(38px,7vw,70px);line-height:1.1}
+h1 span{color:var(--purple)}
+.hero p{max-width:620px;margin:22px auto;color:var(--muted)}
+.btn{
+  display:inline-block;padding:13px 23px;
+  border-radius:9px;text-decoration:none;
+  background:var(--purple);color:white;
+  font-weight:bold;border:0;cursor:pointer;
+}
+.btn.secondary{background:transparent;border:1px solid var(--purple)}
+.container{max-width:1100px;margin:auto;padding:65px 6%}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:30px}
+.section-title p{color:var(--muted);margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:15px;padding:24px;
+}
+.card .emoji{font-size:30px}
+.card h3{margin:12px 0 7px}
+.card p{font-size:14px;color:var(--muted)}
+.card a{display:inline-block;margin-top:16px;color:var(--light);text-decoration:none}
+form{
+  max-width:700px;margin:auto;
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:16px;padding:25px;
+}
+label{display:block;margin:15px 0 7px;font-size:14px}
+input,select,textarea{
+  width:100%;padding:13px;
+  border:1px solid var(--border);
+  border-radius:8px;background:#0c0914;
+  color:white;font:inherit;
+}
+textarea{min-height:130px;resize:vertical}
+input[type=file]{padding:10px}
+input:focus,select:focus,textarea:focus{
+  outline:1px solid var(--purple);
+}
+.form-note{font-size:12px;color:var(--muted);margin-top:12px}
+.notice{
+  padding:15px;border-radius:9px;
+  background:#211831;border:1px solid #55357c;
+  margin:17px 0;font-size:13px;color:#d9c8f5;
+}
+button{font:inherit}
+button:disabled{opacity:.5;cursor:not-allowed}
+.hidden{display:none}
+#result{margin-top:15px;color:var(--light)}
+footer{
+  border-top:1px solid var(--border);
+  text-align:center;padding:35px 15px;
+  color:var(--muted);font-size:13px;
+}
+footer strong{color:white}
+@media(max-width:600px){
+  header{justify-content:center}
+  nav{justify-content:center}
+  .hero{padding:65px 6%}
+  .container{padding:45px 5%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MI<span>VO</span></div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#signalement">Signaler</a>
+    <a href="#soutien">Soutien</a>
+    <a href="#apropos">À propos</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="tag">PLATEFORME DE PROTECTION ET DE SOUTIEN</div>
+  <h1>Ta voix compte.<br><span>Tu n'es pas seul.</span></h1>
+  <p>
+    MIVO accompagne les utilisateurs des réseaux sociaux,
+    lutte contre le harcèlement et facilite l'accès à l'aide.
+  </p>
+  <a href="#signalement" class="btn">Faire un signalement</a>
+  <a href="#soutien" class="btn secondary">Besoin d'aide ?</a>
+</section>
+
+<section class="container" id="services">
+  <div class="section-title">
+    <h2>Nos services</h2>
+    <p>Une plateforme pour protéger, accompagner et agir.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">🛡️</div>
+      <h3>Signalements</h3>
+      <p>Signaler anonymement un comportement problématique sur les réseaux sociaux.</p>
+      <a href="#signalement">En savoir plus →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">⚖️</div>
+      <h3>Recours et restrictions</h3>
+      <p>Être accompagné pour contester une suspension, un bannissement ou une restriction.</p>
+      <a href="#recours">Faire une demande →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">💜</div>
+      <h3>Soutien humain</h3>
+      <p>Demander une écoute et être orienté vers des ressources adaptées.</p>
+      <a href="#soutien">Demander de l'aide →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">📢</div>
+      <h3>Visibilité et publicité</h3>
+      <p>Proposer une campagne de sensibilisation ou une mise en avant de projet.</p>
+      <a href="#publicite">Découvrir →</a>
+    </article>
+  </div>
+</section>
+
+<section class="container" id="signalement">
+  <div class="section-title">
+    <h2>Signaler un comportement</h2>
+    <p>Tu peux commencer sans créer de compte.</p>
+  </div>
+  <form id="reportForm">
+    <div class="notice">
+      🔒 Signalement sans compte obligatoire.
+      Ne renseigne pas ton identité si tu souhaites rester anonyme.
+      N'ajoute que les informations nécessaires.
+    </div>
+    <label for="network">Réseau social concerné</label>
+    <select id="network" required>
+      <option value="">Choisir un réseau</option>
+      <option>TikTok</option><option>Instagram</option>
+      <option>Snapchat</option><option>Facebook</option>
+      <option>YouTube</option><option>X</option><option>Autre</option>
+    </select>
+    <label for="type">Nature du signalement</label>
+    <select id="type" required>
+      <option value="">Choisir une catégorie</option>
+      <option>Harcèlement</option>
+      <option>Cyberharcèlement</option>
+      <option>Menaces</option>
+      <option>Usurpation d'identité</option>
+      <option>Arnaque</option>
+      <option>Contenu dangereux</option>
+      <option>Autre</option>
+    </select>
+    <label for="account">Compte ou profil concerné (facultatif)</label>
+    <input id="account" maxlength="200" placeholder="@pseudo ou lien public">
+    <label for="description">Décris la situation</label>
+    <textarea id="description" required minlength="20" maxlength="5000"
+      placeholder="Explique les faits sans publier d'informations personnelles inutiles..."></textarea>
+    <p class="form-note">N'envoie pas de données médicales, de mots de passe ou de documents d'identité.</p>
+    <button class="btn" type="submit" style="margin-top:20px;width:100%">
+      Préparer mon signalement
+    </button>
+    <p id="result" role="status"></p>
+  </form>
+</section>
+
+<section class="container" id="recours">
+  <div class="section-title">
+    <h2>Demandes de recours</h2>
+    <p>Un accompagnement pour faire entendre ta situation.</p>
+  </div>
+  <form id="appealForm">
+    <label for="appealNetwork">Plateforme concernée</label>
+    <select id="appealNetwork" required>
+      <option value="">Choisir</option>
+      <option>TikTok</option><option>Instagram</option>
+      <option>Snapchat</option><option>Facebook</option>
+      <option>YouTube</option><option>Autre</option>
+    </select>
+    <label for="appealType">Type de demande</label>
+    <select id="appealType" required>
+      <option value="">Choisir</option>
+      <option>Contestation d'un bannissement</option>
+      <option>Contestation d'une restriction</option>
+      <option>Demande de réexamen d'un compte</option>
+      <option>Signalement d'un compte</option>
+    </select>
+    <label for="appealDescription">Explique ta demande</label>
+    <textarea id="appealDescription" required minlength="20" maxlength="5000"></textarea>
+    <button class="btn" type="submit" style="margin-top:20px;width:100%">
+      Préparer ma demande
+    </button>
+    <p id="appealResult" role="status"></p>
+  </form>
+  <p class="form-note" style="text-align:center">
+    MIVO ne peut pas imposer une sanction ni rétablir un compte.
+    Les décisions appartiennent aux plateformes concernées.
+  </p>
+</section>
+
+<section class="container" id="soutien">
+  <div class="section-title">
+    <h2>Tu as besoin de parler ?</h2>
+    <p>Tu n'as pas à traverser une situation difficile seul.</p>
+  </div>
+  <div class="card">
+    <h3>💜 MIVO Écoute</h3>
+    <p>
+      Tu peux demander un accompagnement, être écouté et être orienté
+      vers des professionnels ou des services compétents.
+    </p>
+    <a href="https://www.service-public.fr/particuliers/actualites/A15841" target="_blank" rel="noopener">
+      Découvrir les ressources d'aide →
+    </a>
+    <div class="notice">
+      En cas de danger immédiat en France, appelle le 112 ou le 17.
+      En cas de détresse suicidaire, le 3114 est disponible gratuitement
+      24h/24 et 7j/7.
+    </div>
+  </div>
+</section>
+
+<section class="container" id="publicite">
+  <div class="section-title">
+    <h2>Visibilité et partenariats</h2>
+    <p>Faire connaître des projets et des initiatives positives.</p>
+  </div>
+  <div class="card">
+    <h3>📢 Fais connaître ton projet</h3>
+    <p>
+      Créateurs, associations et entreprises peuvent proposer
+      une campagne de sensibilisation ou une demande de visibilité.
+    </p>
+    <a href="mailto:contact@mivo.one?subject=Demande%20de%20visibilit%C3%A9">
+      Contacter MIVO →
+    </a>
+  </div>
+</section>
+
+<section class="container" id="apropos">
+  <div class="section-title">
+    <h2>À propos de MIVO</h2>
+    <p>Protéger. Accompagner. Agir.</p>
+  </div>
+  <div class="card">
+    <h3>Une initiative pour tous</h3>
+    <p>
+      MIVO a pour ambition de lutter contre le harcèlement,
+      le cyberharcèlement et l'isolement, tout en facilitant
+      l'accès à l'information et au soutien.
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>MIVO</strong><br>
+  Protéger. Accompagner. Agir.<br>
+  <p>© <span id="year"></span> MIVO – Tous droits réservés.</p>
+  <p>Les formulaires sont une démonstration en attente de connexion sécurisée.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+function prepareForm(formId, resultId, label) {
+  document.getElementById(formId).addEventListener("submit", function(e) {
+    e.preventDefault();
+    const result = document.getElementById(resultId);
+    result.textContent =
+      "Interface prête : " + label +
+      ". Le stockage sécurisé doit être activé avant tout envoi réel. Aucun dossier n'a été transmis.";
+  });
+}
+
+prepareForm("reportForm", "result", "ton signalement");
+prepareForm("appealForm", "appealResult", "ta demande de recours");
+</script>
+
+</body>
+</html>
